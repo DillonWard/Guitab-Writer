@@ -1,0 +1,28 @@
+{
+  "name": "guitab",
+  "description": "PROF IT SKILLS PROJECT",
+  "main": "index.html",
+  "dependencies": {
+    "angular": "^1.4.0",
+    "bootstrap": "^4.0.0-alpha.6",
+    "angular-animate": "^1.4.0",
+    "angular-cookies": "^1.4.0",
+    "angular-messages": "^1.4.0",
+    "angular-resource": "^1.4.0",
+    "angular-route": "^1.4.0",
+    "angular-sanitize": "^1.4.0"
+
+  },
+  "authors": [
+    "Dillon"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/DillonWard/Professional-IT-Project",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
