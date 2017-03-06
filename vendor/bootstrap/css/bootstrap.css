@@ -12,7 +12,13 @@ html {
 body {
   margin: 0;
 }
-.tabText textarea{width: 900px !important; padding:50px;display: block;margin-left: 120px; margin-right:230px;}
+.tabText textarea{
+  width: 900px !important; 
+  padding:50px;
+  display: block;
+  margin-left: 120px; 
+  margin-right:230px;
+}
 
 article,
 aside,
