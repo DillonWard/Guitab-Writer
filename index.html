@@ -87,19 +87,10 @@
                 <div class="col-lg-12 text-center">
                     <h2>Tab Writer</h2>
                     <hr class="star-primary">
-                    {{tab}}
-
                     <img ng-src="{{guitarImg}}">
                     </div>
-
-                    <div class="tabText">
-                    <textarea id = "txtarea" rows="5" cols="30">
-                        
-
-
-                    </textarea>
-                    <input type="button" value="add text" id="add" />
-                    </div>
+                    <textarea readonly wrap = "off" id = "txtarea"  rows = "6" cols="21">{{tab}}</textarea>
+                    <button class="btn btn-primary" ng-click="writeTab()" id="add" >WRITE</button>
 
                    <div class="row">
                             <div class="form-group col-xs-12">
@@ -218,7 +209,7 @@
 
 
     <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>

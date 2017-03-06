@@ -2,13 +2,18 @@ angular.module('app.controllers',[])
 
 .controller('mainCtrl', function($scope, $sce) {
   $scope.guitarImg = $sce.trustAsResourceUrl('img/guitar.png');
+ 
+ var tab = {
 
-});
-  var tab = "";
+    E: "E",
+    A: "A",
+    D: "D",
+    G: "G"
+    B: "B",
+    e: "e"
+  }  
 
-$(document).ready(function(){
-  $("#add").click(function(){
-      tab += "--1";
-      $('#txtarea').html(tab);
-  });
+  $scope.writeTab = function(){
+    $scope.tab = tab;
+  }
 });
