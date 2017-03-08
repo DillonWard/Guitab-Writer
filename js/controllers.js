@@ -8,12 +8,18 @@ angular.module('app.controllers',[])
     E: "E",
     A: "A",
     D: "D",
-    G: "G"
+    G: "G",
     B: "B",
     e: "e"
   }  
+  
+  $scope.tab = tab;
 
   $scope.writeTab = function(){
-    $scope.tab = tab;
+   for(var t in tab){
+     tab [t] += "--1";
+   }
+  $scope.tab = tab;
+
   }
 });
