@@ -1,7 +1,7 @@
 angular.module('app.controllers',[])
 
 .controller('mainCtrl', function($scope, $sce) {
-  $scope.guitarImg = $sce.trustAsResourceUrl('img/guitar.png');
+  $scope.guitarImg = $sce.trustAsResourceUrl('static/img/guitar.png');
 
 
  var tab = {
@@ -13,14 +13,12 @@ angular.module('app.controllers',[])
     B: [],
     e: []
   };
-  //JSON.parse(tab);
+
   $scope.tab = tab;
 
   $scope.writeTab = function(){
-   //for(var t in tab){
-     tab ['E'] += "--1";
-   //}
-  $scope.tab = tab;
+    tab ['E'] += "--1";
+    $scope.tab = tab;
 
   }
 });
