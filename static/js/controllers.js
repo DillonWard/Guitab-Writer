@@ -5,7 +5,6 @@ angular.module('app.controllers',[])
 
 
  var tab = {
-
     E: [],
     A: [],
     D: [],
@@ -19,6 +18,5 @@ angular.module('app.controllers',[])
   $scope.writeTab = function(){
     tab ['E'] += "--1";
     $scope.tab = tab;
-
   }
 });
