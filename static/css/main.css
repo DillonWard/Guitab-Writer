@@ -7,9 +7,16 @@
   width: 900px; 
   height: 100%;
   display: block;
-  margin-left: 120px; 
-  margin-right:230px;
-  
+  margin-left: auto; 
+  margin-right: auto;
+}
+.wrapper {
+  text-align: center;
+}
+
+.fret {
+  height: 30px;
+  width: 50px;
 }
 
 body {

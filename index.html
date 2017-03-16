@@ -87,10 +87,18 @@
                 <div class="col-lg-12 text-center">
                     <h2>Tab Writer</h2>
                     <hr class="star-primary">
-                    <img ng-src="{{guitarImg}}">
+
+                    <div class = "wrapper"  >
+                        <span ng-repeat="x in getNumber(6) track by $index"><br>
+                            <button class = "fret" ng-repeat="x in getNumber(18) track by $index" style="background-image: url(static/img/fret.png)"></button>
+                            </span>
+                       
+                        <!--<img ng-src="{{fret.source}}">-->
                     </div>
-                    <textarea readonly wrap = "off" id = "txtarea"  rows = "6"  cols="21">{{tab}}</textarea>
-                    <button class="btn btn-primary" ng-click="writeTab()" id="add" >WRITE</button>
+                    
+                    </div>
+                    <textarea readonly wrap = "oFF" id = "txtarea"  rows = "6"  cols="21" >{{tab}}</textarea>
+                    <button class="btn btn-primary" ng-click="wait()" id="add" >WAIT</button>
                     
 
                    <div class="row">
