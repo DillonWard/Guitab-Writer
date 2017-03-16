@@ -90,10 +90,8 @@
 
                     <div class = "wrapper"  >
                         <span ng-repeat="x in getNumber(6) track by $index"><br>
-                            <button class = "fret" ng-repeat="x in getNumber(18) track by $index" style="background-image: url(static/img/fret.png)"></button>
+                            <button ng-click="writeTab($parent.$index, $index)" class = "fret" ng-repeat="x in getNumber(18) track by $index" style="background-image: url(static/img/fret.png)"></button>
                             </span>
-                       
-                        <!--<img ng-src="{{fret.source}}">-->
                     </div>
                     
                     </div>

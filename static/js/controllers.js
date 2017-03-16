@@ -1,19 +1,6 @@
 angular.module('app.controllers',[])
 
 .controller('mainCtrl', function($scope, $sce) {
- 
-// $scope.guitarImg = $sce.trustAsResourceUrl('static/img/fret.png');
-
-// myFrets =  $sce.trustAsResourceUrl('static/img/fret.png');
-
-$scope.fret = {source: 'static/img/fret.png'};
-
-$scope.row = 12;
-$scope.column = 6;
-
-$scope.getNumber = function(number){
-  return new Array(number)
-}
 
  var tab = {
     E: [],
@@ -24,6 +11,19 @@ $scope.getNumber = function(number){
     e: []
   };
 
+$scope.fret = {source: 'static/img/fret.png'};
+$scope.row = 12;
+$scope.column = 6;
+
+
+$scope.writeTab = function(row, column){
+  $scope.test = row + " "  + column;
+  console.log($scope.test)
+}
+
+$scope.getNumber = function(number){
+  return new Array(number)
+}
   $scope.tab = tab;
 
   $scope.wait = function(){
