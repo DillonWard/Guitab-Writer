@@ -94,16 +94,15 @@
                             </span>
                             <br>
                             <button class="btn btn-primary" ng-click="wait()" id="add" >Wait</button>
+                            <button class="btn btn-primary" ng-click="clear()" id="add" >Clear</button>
                     </div>
                     
                     </div>
                     <textarea readonly wrap = "off" id = "txtarea"  rows = "6"  cols="21" >E |{{tab.E}}&#13;&#10;A |{{tab.A}}&#13;&#10;D |{{tab.D}}&#13;&#10;G |{{tab.G}}&#13;&#10;B |{{tab.B}}&#13;&#10;e |{{tab.e}}</textarea>
-                    
-                    
+                    <button type="submit" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Save</button>                   
 
                    <div class="row">
                     <div class="form-group col-xs-12">
-                        <button type="submit" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Save</button>
                         <!-- Modal -->
                         
                         <div class="modal fade" id="myModal" role="dialog">
@@ -235,6 +234,7 @@
     <script type="text/javascript" src = "static/bower_components/angular/angular.js"></script>
     <script src = "static/js/app.js"></script>
     <script src = "static/js/controllers.js"></script>
+
 
 </body>
 

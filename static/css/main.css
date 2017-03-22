@@ -13,12 +13,13 @@
 }
 .wrapper {
   text-align: center;
-  display: block;
+  display: inline-block;
+
 }
 
 .fret {
   height: 30px;
-  width: 45px;
+  width: 55px;
 }
 
 body {
@@ -349,6 +350,7 @@ fieldset[disabled] .btn-primary.active {
   background-color: #18BC9C;
   border-color: #18BC9C;
   font-weight: 700;
+  margin-left: 135px;
 }
 .btn-success:hover,
 .btn-success:focus,
