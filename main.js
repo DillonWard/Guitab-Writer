@@ -1,7 +1,24 @@
 
+// Call the packages needed
 var express = require('express');
 var app = express();
 var path = require('path');
+var bodyParser = require('body-parser');
+
+// configure to use bodyParser to retrieve data from a POST
+app.use(bodyParser.urlencoded({ extended: true}));
+app.use(bodyParser.json());
+
+// set the port
+var port = process.env.PORT || 8080;
+var router = express.Router();
+
+// testing route 
+router.get('/', function(req, res){
+    res.json({message: 'WORKING'})
+});
+
+app.use('/api', router);
 
 // import mongoose module
 var mongoose = require('mongoose'); 
@@ -23,8 +40,8 @@ app.get('/', function(req, res){
         res.sendFile(path.join(__dirname + '/index.html')); 
 });
 
-app.listen(300, function(){
-    console.log('Connected to Port 300')
-});
+var Tab = require('./static/js/models/tab');
 
-// schema
+// start the server
+app.listen(port);
+console.log('Connected to Port ' + port);

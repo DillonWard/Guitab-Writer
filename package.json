@@ -11,6 +11,7 @@
   "devDependencies": {
     "mongoose": "~4.9.0",
     "bootstrap": "^3.3.7",
+    "body-parser": "~1.0.1",
     "browser-sync": "^2.13.0",
     "font-awesome": "^4.6.3",
     "gulp": "^3.9.1",
