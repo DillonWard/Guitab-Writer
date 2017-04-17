@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'); 
 var Schema = mongoose.Schema;
 
-var TabSchema = new Schema({
+var TabSchema = new mongoose.Schema({
     name: String,
     tab: String
 });
