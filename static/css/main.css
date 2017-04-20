@@ -352,6 +352,14 @@ fieldset[disabled] .btn-primary.active {
   font-weight: 700;
   margin-left: 135px;
 }
+
+.btn-modal{
+    color: white;
+  background-color: #18BC9C;
+  border-color: #18BC9C;
+  font-weight: 700;
+}
+
 .btn-success:hover,
 .btn-success:focus,
 .btn-success:active,
