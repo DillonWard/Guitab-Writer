@@ -43,9 +43,67 @@ router.route('/tabs') // on routes that end in '/tabs'
                 
             res.send({ message: 'Tab created and saved!'});
         });
+    })
+// gets the tab from the database
+    .get(function(req, res){
+        Tab.find(function(err, tabs){
+            if (err)
+                res.send(err);
+
+            res.json(tabs);
+        });
     });
 
+router.route('/tabs/:tab_id')
+
+    // get the tab with that id (accessed at GET http://localhost:5000/api/tabs/:tab_id)
+    .get(function(req, res) {
+        Tab.findById(req.params.tab_id, function(err, tab) {
+            if (err)
+                res.send(err);
+            res.json(tab);
+        });
+    })
+   
+    // update the tab with this id(accessed at PUT http://localhost:5000/api/tabs/:tab_id)
+
+    .put(function(req, res){
+
+        // use the tab model to the tab wanted
+        Tab.findById(req.params.tab_id, function(err, tab){
+            if(err)
+                res.send(err);
+            
+            tab.name = req.body.name; // update the info
+
+            // save the tab
+            tab.save(function(err){
+                if(err)
+                    res.send(err);
+                
+                res.json({message: 'Tab Updated!'});
+            });
+        });
+    })
+
+// delete added
+    .delete(function(req, res){
+        Tab.remove({
+            _id: req.params.tab_id
+        },  function(err, tab){
+            if(err)
+                res.send(err);
+            
+            res.json({message: 'Tab Deleted!'});
+
+
+        });  
+    });
+
+
+// REGISTER ROUTES ==================================================
 // all routes are prefixed to '/api'
+
 app.use('/api', router);
 
 // BASE SETUP
