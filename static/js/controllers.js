@@ -1,6 +1,7 @@
 angular.module('app.controllers',[])
 
 .controller('mainCtrl', function($scope, $sce) {
+  
 
   var tab = {
       E: [],
@@ -157,4 +158,56 @@ angular.module('app.controllers',[])
     tab ['e'] += "--";
     $scope.tab = tab;
   }
+
+  var newTab = {
+    name: null,
+    tabBody: null
+} 
+  $scope.fullTab;
+
+
+  $("#savetab").click(function(e){
+              
+      e.preventDefault();
+            
+      newTab.name = $('#name').val();    
+      newTab.tabBody = $('#tabBody').val();
+      
+          $.ajax({
+              type: 'POST',
+              url:'/api/tabs',
+              data: JSON.stringify(newTab),
+              dataType: "json",
+              contentType: "application/json",
+              success: function(response){
+                  console.log("POSTED " + response);
+              } // makes an ajax call to post them to the server
+          });
+  });
+
+
+  $scope.viewTab = null;
+
+  $("#viewtabs").click(function(e){
+
+      e.preventDefault();
+
+      $.ajax({
+          type: 'GET',
+          async: false,
+          url: '/api/tabs',
+          dataType: "json",
+          contentType: "application/json",
+          success: function(response){
+              console.log(response);
+            // $scope.viewTab= response;
+            // console.log(response.data);
+            // console.log(JSON.stringify($scope.viewTab))
+              //$scope.viewTab = JSON.stringify(response);
+              $scope.viewTab = response;
+              console.log($scope.viewTab[0].name)
+
+          } // makes an ajax call to post them to the server
+      });
+  });
 });

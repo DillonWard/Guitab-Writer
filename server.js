@@ -19,7 +19,7 @@ var router = express.Router();
 
 // test route to make sure everything is working(GET  ://localhost:8080/api)
 router.use(function(req, res, next){
-    console.log('test route is running') // logging to make sure it'll work
+    console.log('route is being used') // logging to make sure it'll work
     next(); // go onto the next route and don't stop here
 });
 

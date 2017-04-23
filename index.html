@@ -126,10 +126,7 @@
                                  <h4 class="modal-title">Tabs</h4>
                               </div>
                               <div class="modal-body">
-                                
-                                 {% for t in tab %}
-                                 <p>SONG NAME: {{ tab.name }}</p>
-                                 {% endfor %}
+                                <p ng-repeat="t in viewTab"> {{ t.name }} </p>
                                  </br>                                    
                               </div>
                               <div class="modal-footer">
