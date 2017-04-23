@@ -36,7 +36,8 @@ router.route('/tabs') // on routes that end in '/tabs'
         
         var tab = new Tab();
         tab.name = req.body.name;
-
+        tab.tabBody = req.body.tabBody;
+        
         tab.save(function(err){
             if (err)
                 res.send(err)
@@ -49,7 +50,6 @@ router.route('/tabs') // on routes that end in '/tabs'
         Tab.find(function(err, tabs){
             if (err)
                 res.send(err);
-
             res.json(tabs);
         });
     });
@@ -86,7 +86,7 @@ router.route('/tabs/:tab_id')
         });
     })
 
-// delete added
+// delete tab
     .delete(function(req, res){
         Tab.remove({
             _id: req.params.tab_id
@@ -101,7 +101,6 @@ router.route('/tabs/:tab_id')
     });
 
 
-// REGISTER ROUTES ==================================================
 // all routes are prefixed to '/api'
 
 app.use('/api', router);
@@ -112,7 +111,6 @@ app.use('/api', router);
 // import mongoose module
 var mongoose = require('mongoose'); 
 
-// ...
 
 // set up default mongoose connection
 var mongoDB = 'mongodb://localhost/tab_db'; 

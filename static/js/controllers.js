@@ -157,4 +157,14 @@ angular.module('app.controllers',[])
     tab ['e'] += "--";
     $scope.tab = tab;
   }
+
+$scope.showTabs = function(){
+  
+}
+/*
+  function showTabs($scope){
+    $scope.tabs = [
+      {name: tab.name, body: tab.body}
+    ]
+  }*/
 });
