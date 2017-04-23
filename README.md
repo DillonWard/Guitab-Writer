@@ -15,6 +15,7 @@ To begin using the project, we need to take a look at the technologies used. The
 To use the application is simple. The user clicks on frets/strings, and below in a text area their choice will be appended.
 ![alt text](http://image.prntscr.com/image/e3dfe429b4904ff9935cbdc86de1709b.png)
 The wait and clear buttons can either add lines to symbolize waiting on the tab, or to clear everything and start again. The save button can send and save the tab to the database. The user can also view tabs that were previously saved by pressing the view tabs button, and the name of the tabs will appear in a modal list.
+
 ---
 ## MEAN Stack
 ### MongoDB
