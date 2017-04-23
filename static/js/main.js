@@ -21,3 +21,24 @@ $("#savetab").click(function(e){
             } // makes an ajax call to post them to the server
         });
 });
+
+var viewTab = {
+    name:[],
+    tabBody: []
+}
+
+$("#viewtabs").click(function(e){
+
+    e.preventDefault();
+
+    $.ajax({
+        type: 'GET',
+        url: '/api/tabs',
+        data: JSON.stringify(viewTab),
+        dataType: "json",
+        contentType: "application/json",
+        success: function(response){
+            console.log("GET " + response);
+        } // makes an ajax call to post them to the server
+    });
+});
