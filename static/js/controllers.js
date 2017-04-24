@@ -184,7 +184,6 @@ angular.module('app.controllers',[])
           });
   });
 
-
   $scope.viewTabs = function(){
   $.ajax({
           type: 'GET',
@@ -196,6 +195,25 @@ angular.module('app.controllers',[])
               $scope.viewTab = response;
           }
       });
+  }
 
+$scope.deleteTab = function(id){
+  $.ajax({
+          type: 'DELETE',
+          url: '/api/tabs/' + id,
+          dataType: "json",
+          contentType: "application/json",
+          success: function(response){
+              console.log(response);
+              for(var i = 0; i < $scope.viewTab.length; i++){
+                console.log($scope.viewTab[i]);
+                if($scope.viewTab[i]._id == id){
+                  console.log("ww");
+                  $scope.viewTab.splice(i, 1);
+                }
+              }
+               $scope.viewTab =  $scope.viewTab;
+          }
+      });
   }
 });

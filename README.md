@@ -25,11 +25,22 @@ Once mongo in installed, the user should open command prompt and enter the follo
 C:\Program Files\MongoDB\Server\3.4\bin
 ```
 Once the directory is changed, enter `mongod` and the server is running.
-##### Express
-
-##### AngularJS
 ##### Node.js
+Node.js was used for installing other components, as well as handling connections. You can head over to the [download](https://nodejs.org/en/download/) section of the official Node.js website and follow the installation guide there.
+
+##### Express
+Next, head over to the [Expressjs](https://expressjs.com/en/starter/installing.html) site and follow the installation guide on how to get Express.
 ##### Bower
+Bower is a package manager that can handle components that contain HTML, CSS, JavaScript, fonts or even image files. 
+To get started with Bower, assuming Node.js was installed, use the command:
+```
+npm install -g bower
+```
+##### AngularJS
+After installing Bower, you can now install Angular with one command:
+```
+bower install angular
+```
 
 ---
 ## MEAN Stack

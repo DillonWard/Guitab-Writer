@@ -80,7 +80,6 @@
                </div>
                <textarea readonly wrap = "off" id = "tabBody"  rows = "6"  cols="21" >E |{{tab.E}}&#13;&#10;A |{{tab.A}}&#13;&#10;D |{{tab.D}}&#13;&#10;G |{{tab.G}}&#13;&#10;B |{{tab.B}}&#13;&#10;e |{{tab.e}}</textarea>
                
-               
                <button type="submit" class="btn btn-success btn-lg" data-toggle="modal" data-target="#saveModal">Save</button> 
                <button type="submit" class="btn btn-modal btn-lg" data-toggle="modal" ng-click = "viewTabs()"data-target="#listModal">View Tabs</button>
                
@@ -126,15 +125,13 @@
                                  <h4 class="modal-title">Tabs</h4>
                               </div>
                               <div class="modal-body">
-                                <p ng-repeat="t in viewTab"> {{ t.name }}</p>                             
+                                <p ng-repeat="t in viewTab"> {{ t.name }} &nbsp;<button class="btn btn-view btn-lg">View</button> &nbsp;<button ng-click = "deleteTab(t._id)" class="btn btn-delete btn-lg">Delete</button></p>
+                             
                               </div>
                               <div class="modal-footer">
                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                               </div>
                            </div>
-
-
-
                         </div>
                      </div>
                   </div>

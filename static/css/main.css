@@ -360,6 +360,20 @@ fieldset[disabled] .btn-primary.active {
   font-weight: 700;
 }
 
+.btn-view{
+ color: white;
+  background-color: #18BC9C;
+  border-color: #18BC9C;
+  font-size: 10px;
+}
+
+.btn-delete{
+ color: white;
+  background-color: #E23333;
+  border-color: #E23333;
+  font-size: 10px;
+}
+
 .btn-success:hover,
 .btn-success:focus,
 .btn-success:active,
