@@ -16,6 +16,21 @@ To use the application is simple. The user clicks on frets/strings, and below in
 ![alt text](http://image.prntscr.com/image/e3dfe429b4904ff9935cbdc86de1709b.png)
 The wait and clear buttons can either add lines to symbolize waiting on the tab, or to clear everything and start again. The save button can send and save the tab to the database. The user can also view tabs that were previously saved by pressing the view tabs button, and the name of the tabs will appear in a modal list.
 
+#### Components Needed
+##### MongoDB
+MongoDB was used for the Database. Head over [here](https://www.mongodb.com/download-center) and download Mongo.
+There is an [installation guide](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/) for Mongo on their website that can be followed.
+Once mongo in installed, the user should open command prompt and enter the following command:
+```
+C:\Program Files\MongoDB\Server\3.4\bin
+```
+Once the directory is changed, enter `mongod` and the server is running.
+##### Express
+
+##### AngularJS
+##### Node.js
+##### Bower
+
 ---
 ## MEAN Stack
 ### MongoDB
