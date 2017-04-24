@@ -4,12 +4,18 @@
 
 ## Introduction
 The following repository contains a MEAN Stack Web Application for a third-year undergraduate project for the module Professional Practice in IT. The module is taught to undergraduate students at GMIT in the Department of Computer Science and Applied Physics. The lecturer is Damien Costello.
-
-## Project Overview
 ![alt text](http://image.prntscr.com/image/08b28e20f93f48a9957c9b53f5f71726.png)
 
 ### Specifications
 The purpose of this project is to demonstrate skills gained over the past 3 years from different modules, as well as use new technologies learned for the purpose of this project. The project should contain a design document, a demonstrative video, a guide on how to use the project and the code itself.
+### Requirements
+* Internet Connection
+* MongoDB
+* Express.js
+* AngularJS
+* Node.js
+* Full windowed explorer
+
 ### Getting Started
 To begin using the project, we need to take a look at the technologies used. The project is a MEAN Stack project, meaning it was scripted using MongoDB, AngularJS, Express, and Node.js. Bower was also used for installing some components.
 To use the application is simple. The user clicks on frets/strings, and below in a text area their choice will be appended.
@@ -112,17 +118,86 @@ Node is an event-driven, non-blocking I/O model that makes it light weight and e
 
 ---
 ## Architecture
+### Back End
+#### server.js
+The server.js file is where the restful API is. This is where all of the routing is done, where the `index.html` is set as the page to be loaded at the route `'/'`, and where the CRUD functions are found. 
+#### tab.js
+This is where the schema for the tab is saved. Here, the components of the tab object is set. The tab contains a name and a tab body, where the actual tab is saved. 
+```
+var TabSchema = new mongoose.Schema({
+    name: String,
+    tabBody: String
+});
+```
+*The backend also contains a update function which is not in use, but is there for demonstration.*
+### Front End
+#### Controller.js
+The controller is where the JavaScript for the tab maker is located. Here, you can find the functions that append to the text area when clicked. Whenever a button is clicked, the x/y of that is added to the text area. This is also where the image for the fret is found, which is then looped to display multiple frets - making a fretboard. `Clear` and `Wait` functions are also found here.
 
-## Implementation
+```
+    if(row === 0){ // if the row clicked is 0, append to the E string
+      tab ['E'] += "--" + column + "--";
+      tab ['A'] += "-----";
+      tab ['D'] += "-----";
+      tab ['G'] += "-----";
+      tab ['B'] += "-----";
+      tab ['e'] += "-----";
+    }
+```
+Ajax calls are also found here, which are used for communicating with the rest api.
+```
+ $.ajax({
+          type: 'GET/DELETE/POST',
+          async: false,
+          url: '/api/tabs',
+          dataType: "json",
+          contentType: "application/json",
+          success: function(response){
+          }
+      });
+```
+
+![alt text](http://image.prntscr.com/image/d3449ec042424bb482c4a56b83b4a0a9.png)
+![alt text](http://image.prntscr.com/image/257035de54664e85a32d9ff8977c1581.png)
+
+
+## Project Overview
 ### Planning
+I had to do some research about the technologies that I was going to be using, since I had little or no experience with them. Luckily, I found a tutorial on how to create a rest API that I could use to help me make my back end.
+Then, I had to map out my project and how I thought it would finally come together.
+### Implementation
+##### Template
+Starting off, I downloaded a template from Bootstrap and stripped it of whatever I didn't need. I changed some things around, some pictures and text, and left a reference link.
+##### Fretboard
+My focus was one goal at a time. I started off with just trying to get the fretboard displaying first on the page. My initial plan was to have 1 large image of a fretboard, and place invisible buttons over it, but settled for looping small images and turned them into buttons.
 
-## Requirements
+![alt text](http://image.prntscr.com/image/8d0a83e07d0c4996bf8a46f15b08ff8d.png)
 
+##### Text Area
+Then, I added the large text area that sits beneath the fretboard. I made it so that you cannot edit the text area to prevent any errors from a user messing with the tab in creation. Then I added functionality to the buttons to append to the text area, depending on which button is pressed.
+
+##### Back End
+For the back end, I implemented the rest api. I simply followed [this](https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4) tutorial to implement my back end, and for the ajax calls I referenced a [previous project](https://github.com/DillonWard/Single-Page-Web-App/blob/master/static/main.js) that I had completed. 
+### Limitations
+I had first planned to simply make the application using JavaScript and CouchDB, I then decided I would use MEAN stack as I found it interesting and I would be learning new languages, or becoming more familiar with languages I had previously used. This change had a big cut into the time I had put into the process of creating the web app. I also needed some time to learn more about MEAN stack and what I was using. During the time of these projects, I had 3 other projects that I also needed to attend to, making it more difficult to achieve everything I wanted to implement into the application. 
 ## Design
+##### Users
+The application is a single user system. The user will be able to create, retrieve, and delete their own tabs. An update was also in the works, but due to time constraints cannot be fulfilled.
+##### Data
+The data sent to the server starts off as simply a name and a tab body, and is sent to the database as a JSON object. The data is read in, parsed and is again observable.
+
+##### Output
+When the user clicks the "View Tabs" button, a modal is toggled displaying the tabs that are currently saved on the database. There are 2 buttons beside the names, `view` and `delete`. If view is selected, the tab will open in a new window. If delete is chosen, the tab is deleted by `_id` and is removed from the database. 
+
+##### Software
+Assuming the user has already installed the components listed at the [beginning](https://github.com/DillonWard/Guitab-Writer#components-needed) of the document, the only software the user needs is a web browser to use the application. The application MUST be used in full windowed, otherwise the buttons begin to collapse on top of each other.
 
 ## Future Development
+I wish to continue developing the application, finishing off the update functionality, adding the option to write a bass tab, and displaying the tab in a nicer, personalized template. I don't think I used Angular to it's full capabilites, particularly when using Ajax calls. Next time I create a web application, I wish to do so using Angular to it's full capabilites. 
+I would have also have liked to have made everything more follow the MVC model more, having a factory to do my HTTP requests for me. Due to time limitations, I had to just use what I already knew.
 
 ## Conclusions
+I thought creating this app was a wonderful learning experience. I got to learn about MEAN stack, and even now have grown more of an interest in JavaScript. I'd definitely like to continue creating applications using the MEAN stack model, or discover new models. I've also become more interest in Full Stack development, and would like to continue developing Full Stack. Before this project, I wasn't too comfortable using databases. Now, I've used them enough that I'm enthusiastic to learn more.
 
 ---
 ### References

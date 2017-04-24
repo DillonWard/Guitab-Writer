@@ -19,15 +19,12 @@ var router = express.Router();
 
 // test route to make sure everything is working(GET ://localhost:5000/api)
 router.use(function(req, res, next){
-    console.log('route is being used') // logging to make sure it'll work
     next(); // go onto the next route and don't stop here
 });
 
 // testing route with a GET method
 router.get('/', function(req, res){
-
 });
-
 
 router.route('/tabs') // on routes that end in '/tabs'
     
@@ -128,14 +125,16 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 app.use('/static',  express.static( path.join(__dirname, '/static')));
 
 app.get('/', function(req, res){
-        res.sendFile(path.join(__dirname + '/index.html')); 
+        res.sendFile(path.join(__dirname + '/static/index.html')); 
 });
 
+/*
 app.get('/tabview', function(req, res){
-        res.sendFile(path.join(__dirname + '/tabview.html')); 
+        res.sendFile(path.join(__dirname + '/static/tabview.html')); 
 });
+*/
 
 // START THE SERVER
 // =================================================================
 app.listen(port);
-console.log('Connected to Port ' + port);
+console.log("Connected to port: " + port)

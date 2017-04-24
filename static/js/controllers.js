@@ -1,17 +1,15 @@
-angular.module('app.controllers',[])
+angular.module('app')
 
-.controller('mainCtrl', function($scope, $sce) {
+.controller('mainCtrl', function($scope, $location) {
   
-
   var tab = {
       E: [],
       A: [],
       D: [],
       G: [],
       B: [],
-      e: []
+      e: [] 
     };
-    
  
   $scope.fret = {source: 'static/img/fret.png'};
 
@@ -216,11 +214,12 @@ $scope.deleteTab = function(id){
       });
   }
 
+
   $scope.openTab = function(body){
     console.log(body);
-   var newtab = window.open('tabview');
+   //var newtab = window.open('tabview');
 
-   $scope.body = body;
+    setTimeout(function(){window.location='/#!/tabview/'+body._id},3000);
+   
   }  
-
 });

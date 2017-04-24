@@ -6,4 +6,4 @@ var TabSchema = new mongoose.Schema({
     tabBody: String
 });
 
-module.exports = mongoose.model('Tab', TabSchema);
+module.exports = mongoose.model('Tab', TabSchema); 
