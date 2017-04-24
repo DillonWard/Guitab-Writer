@@ -15,7 +15,6 @@ To begin using the project, we need to take a look at the technologies used. The
 To use the application is simple. The user clicks on frets/strings, and below in a text area their choice will be appended.
 ![alt text](http://image.prntscr.com/image/e3dfe429b4904ff9935cbdc86de1709b.png)
 The wait and clear buttons can either add lines to symbolize waiting on the tab, or to clear everything and start again. The save button can send and save the tab to the database. The user can also view tabs that were previously saved by pressing the view tabs button, and the name of the tabs will appear in a modal list.
-
 ---
 ## MEAN Stack
 ### MongoDB
@@ -36,17 +35,35 @@ Mongo is fast and flexible, and simple to use. Rather than using the typical tab
 * Backup
 
 ### Express
-
 #### What is Express?
+[Express](https://expressjs.com/) is a light weight-web application framework that allows for the organization of a web application into the MVC architecture on the server side. Express allows users to build their backend using JavaScript.
+
 #### Why use Express?
+Express makes sure that you don't have to be re-writing code over and over. Express simply makes it easier to create a webapp, as it comes with many funcionalities such as routing, parsing, error handling, and templating.
+#### Features
+* Server-side web and mobile application framework
+* Languade: Writter in JavaScript
+* Templating engines: Express comes with two templating engines, Jade and EJS, which facilitate the flow of data into a website
+* MVC Pattern: Express supports the Model-View Control architecture
+* Platform: Node.js
+* Cross Platform
+* Express builds:
+    * Single/Multi page web applications
+    * Hybrid Mobile and Web Apps
+    * APIs
 
 ### AngularJS
 #### What is AngularJS?
+AngularJS is a structural framework for dynamic web applications. It allows you to use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly. AngularJS's data binding and dependency injection eliminates much of the code that would have to be otherwise written. Angular allows you to turn a basic, static website into a dynamic web application with features and functionalities clearly expressed.
+
 #### Why use AngularJS?
+
+#### Features
 
 ### Node.js
 #### What is Node.js?
 #### Why use Node.js?
+#### Features
 ---
 ## Implementation
 ### Planning

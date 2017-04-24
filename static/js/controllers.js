@@ -159,12 +159,11 @@ angular.module('app.controllers',[])
     $scope.tab = tab;
   }
 
+  
   var newTab = {
     name: null,
     tabBody: null
-} 
-  $scope.fullTab;
-
+  } 
 
   $("#savetab").click(function(e){
               
@@ -186,28 +185,17 @@ angular.module('app.controllers',[])
   });
 
 
-  $scope.viewTab = null;
-
-  $("#viewtabs").click(function(e){
-
-      e.preventDefault();
-
-      $.ajax({
+  $scope.viewTabs = function(){
+  $.ajax({
           type: 'GET',
           async: false,
           url: '/api/tabs',
           dataType: "json",
           contentType: "application/json",
           success: function(response){
-              console.log(response);
-            // $scope.viewTab= response;
-            // console.log(response.data);
-            // console.log(JSON.stringify($scope.viewTab))
-              //$scope.viewTab = JSON.stringify(response);
               $scope.viewTab = response;
-              console.log($scope.viewTab[0].name)
-
-          } // makes an ajax call to post them to the server
+          }
       });
-  });
+
+  }
 });
