@@ -208,7 +208,6 @@ $scope.deleteTab = function(id){
               for(var i = 0; i < $scope.viewTab.length; i++){
                 console.log($scope.viewTab[i]);
                 if($scope.viewTab[i]._id == id){
-                  console.log("ww");
                   $scope.viewTab.splice(i, 1);
                 }
               }
@@ -216,4 +215,12 @@ $scope.deleteTab = function(id){
           }
       });
   }
+
+  $scope.openTab = function(body){
+    console.log(body);
+   var newtab = window.open('tabview');
+
+   $scope.body = body;
+  }  
+
 });

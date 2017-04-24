@@ -125,7 +125,7 @@
                                  <h4 class="modal-title">Tabs</h4>
                               </div>
                               <div class="modal-body">
-                                <p ng-repeat="t in viewTab"> {{ t.name }} &nbsp;<button class="btn btn-view btn-lg">View</button> &nbsp;<button ng-click = "deleteTab(t._id)" class="btn btn-delete btn-lg">Delete</button></p>
+                                <p ng-repeat="t in viewTab"> {{ t.name }} &nbsp;<button ng-click = "openTab(t.tabBody)" class="btn btn-view btn-lg">View</button> &nbsp;<button ng-click = "deleteTab(t._id)" class="btn btn-delete btn-lg">Delete</button></p>
                              
                               </div>
                               <div class="modal-footer">

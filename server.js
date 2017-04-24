@@ -17,7 +17,7 @@ var port = process.env.PORT || 5000; // sets the port
 
 var router = express.Router();
 
-// test route to make sure everything is working(GET  ://localhost:8080/api)
+// test route to make sure everything is working(GET ://localhost:5000/api)
 router.use(function(req, res, next){
     console.log('route is being used') // logging to make sure it'll work
     next(); // go onto the next route and don't stop here
@@ -25,7 +25,7 @@ router.use(function(req, res, next){
 
 // testing route with a GET method
 router.get('/', function(req, res){
-    res.json({message: 'WORKING - you can GET from the API, GOOD JOB!'})
+
 });
 
 
@@ -100,7 +100,6 @@ router.route('/tabs/:tab_id')
         });  
     });
 
-
 // all routes are prefixed to '/api'
 
 app.use('/api', router);
@@ -132,6 +131,9 @@ app.get('/', function(req, res){
         res.sendFile(path.join(__dirname + '/index.html')); 
 });
 
+app.get('/tabview', function(req, res){
+        res.sendFile(path.join(__dirname + '/tabview.html')); 
+});
 
 // START THE SERVER
 // =================================================================
