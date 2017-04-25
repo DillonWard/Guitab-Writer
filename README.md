@@ -4,7 +4,8 @@
 
 ## Introduction
 The following repository contains a MEAN Stack Web Application for a third-year undergraduate project for the module Professional Practice in IT. The module is taught to undergraduate students at GMIT in the Department of Computer Science and Applied Physics. The lecturer is Damien Costello.
-![alt text](http://image.prntscr.com/image/08b28e20f93f48a9957c9b53f5f71726.png)
+### Video Presentation
+[![IMAGE ALT TEXT HERE](http://image.prntscr.com/image/08b28e20f93f48a9957c9b53f5f71726.png)](https://www.youtube.com/watch?v=yMsiZdEM_pI)
 
 ### Specifications
 The purpose of this project is to demonstrate skills gained over the past 3 years from different modules, as well as use new technologies learned for the purpose of this project. The project should contain a design document, a demonstrative video, a guide on how to use the project and the code itself.
@@ -193,8 +194,7 @@ When the user clicks the "View Tabs" button, a modal is toggled displaying the t
 Assuming the user has already installed the components listed at the [beginning](https://github.com/DillonWard/Guitab-Writer#components-needed) of the document, the only software the user needs is a web browser to use the application. The application MUST be used in full windowed, otherwise the buttons begin to collapse on top of each other.
 
 ## Future Development
-I wish to continue developing the application, finishing off the update functionality, adding the option to write a bass tab, and displaying the tab in a nicer, personalized template. I don't think I used Angular to it's full capabilites, particularly when using Ajax calls. Next time I create a web application, I wish to do so using Angular to it's full capabilites. 
-I would have also have liked to have made everything more follow the MVC model more, having a factory to do my HTTP requests for me. Due to time limitations, I had to just use what I already knew.
+I wish to continue developing the application, finishing off the update functionality, adding the option to write a bass tab, and displaying the tab in a nicer, personalized template. I don't think I used Angular to it's full capabilites, particularly when using Ajax calls. Next time I create a web application, I wish to do so using Angular to it's full capabilites.
 
 ## Conclusions
 I thought creating this app was a wonderful learning experience. I got to learn about MEAN stack, and even now have grown more of an interest in JavaScript. I'd definitely like to continue creating applications using the MEAN stack model, or discover new models. I've also become more interest in Full Stack development, and would like to continue developing Full Stack. Before this project, I wasn't too comfortable using databases. Now, I've used them enough that I'm enthusiastic to learn more.
