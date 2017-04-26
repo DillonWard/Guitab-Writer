@@ -163,6 +163,7 @@ angular.module('app')
     tabBody: null
   } 
 
+// ajax functions to post, get, and delete from server
   $("#savetab").click(function(e){
               
       e.preventDefault();
@@ -217,9 +218,6 @@ $scope.deleteTab = function(id){
 
   $scope.openTab = function(body){
     console.log(body);
-   //var newtab = window.open('tabview');
-
-    setTimeout(function(){window.location='/#!/tabview/'+body._id},3000);
-   
+    setTimeout(function(){window.location='/#!/tabview/'+body._id},300);   
   }  
 });

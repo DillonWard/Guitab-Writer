@@ -2,7 +2,6 @@ angular.module('app')
 
 .controller('viewtabCtrl', function($scope, $location, $routeParams) {
 
-    $scope.body = "wow";
   var loadTab = function(){
     $.ajax({
           type: 'GET',
